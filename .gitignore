@@ -1,0 +1,19 @@
+# Local assignment documents
+*.pdf
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
