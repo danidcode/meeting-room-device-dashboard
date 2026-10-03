@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a2236;
+  --color-primary: #0169f5;
+  --color-primary-hover: #0056cc;
+  --color-online: #27c6be;
+  --color-offline: #a5b9ca;
+  --color-deactivated: #f59e0c;
+  --color-slate-50: #f5f7fb;
+  --color-slate-100: #edf1f6;
+  --color-slate-200: #e2e8ef;
+  --color-slate-300: #c9d4df;
+  --color-slate-400: #8297a9;
+  --color-slate-500: #607487;
+  --color-slate-600: #4d6376;
+  --color-slate-700: #344f65;
+  --color-slate-900: #0a2236;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-slate-50);
+    color: var(--color-slate-900);
+    font-family: var(--font-sans);
+  }
+  button, summary { cursor: pointer; }
+  button:disabled { cursor: default; }
+  :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+}
+
+@layer components {
+  .panel { @apply rounded-xl border border-slate-200 bg-white; }
+  .field-label { @apply mb-2 block text-sm font-medium text-slate-700; }
+  .field { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400; }
+  .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-hover; }
+  .button-secondary { @apply rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40; }
+}
