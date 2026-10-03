@@ -39,7 +39,9 @@ describe('device management', () => {
     expect(screen.queryByRole('row', { name: /London - Boardroom 1\b/ })).not.toBeInTheDocument()
     expect(summaryCount('Total devices')).toHaveTextContent('432')
     expect(summaryCount('Online')).toHaveTextContent('179')
-    expect(screen.getByRole('status')).toHaveTextContent('London - Boardroom 1 removed successfully.')
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'London - Boardroom 1 removed successfully.',
+    )
   })
 
   it('dismisses a confirmation without undoing the device change', async () => {

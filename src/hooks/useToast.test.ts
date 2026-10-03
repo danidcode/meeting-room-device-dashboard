@@ -23,7 +23,8 @@ describe('useToast', () => {
   })
 
   it.each(['Device removed successfully.', 'Device added successfully.'])(
-    'restarts the timer for a replacement message: %s', (message) => {
+    'restarts the timer for a replacement message: %s',
+    (message) => {
       const { result } = renderHook(useToast, { wrapper: StrictMode })
       act(() => result.current.showToast('Device added successfully.'))
       act(() => vi.advanceTimersByTime(3000))

@@ -16,6 +16,8 @@ Open the local URL printed in the terminal (normally http://localhost:5173).
 ```sh
 npm run build   # Type-check and create a production build
 npm run lint    # Run the linter
+npm run format # Format source, configuration, and documentation with Prettier
+npm run format:check # Check formatting without changing files
 npm test        # Run automated tests once
 npm run test:watch # Re-run tests while editing
 npm run preview # Serve the production build locally

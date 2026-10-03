@@ -15,9 +15,14 @@ const devices: Device[] = Array.from({ length: 26 }, (_, index) => ({
 
 function DeviceTableExample() {
   const [items, setItems] = useState(devices)
-  return <DeviceTable devices={items} onRemove={(device) => {
-    setItems((current) => current.filter((item) => item.id !== device.id))
-  }} />
+  return (
+    <DeviceTable
+      devices={items}
+      onRemove={(device) => {
+        setItems((current) => current.filter((item) => item.id !== device.id))
+      }}
+    />
+  )
 }
 
 describe('DeviceTable', () => {

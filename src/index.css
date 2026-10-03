@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-navy: #0a2236;
@@ -26,15 +26,33 @@
     color: var(--color-slate-900);
     font-family: var(--font-sans);
   }
-  button, summary { cursor: pointer; }
-  button:disabled { cursor: default; }
-  :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: default;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
 }
 
 @layer components {
-  .panel { @apply rounded-xl border border-slate-200 bg-white; }
-  .field-label { @apply mb-2 block text-sm font-medium text-slate-700; }
-  .field { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400; }
-  .button-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-hover; }
-  .button-secondary { @apply rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40; }
+  .panel {
+    @apply rounded-xl border border-slate-200 bg-white;
+  }
+  .field-label {
+    @apply mb-2 block text-sm font-medium text-slate-700;
+  }
+  .field {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400;
+  }
+  .button-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-hover;
+  }
+  .button-secondary {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40;
+  }
 }
