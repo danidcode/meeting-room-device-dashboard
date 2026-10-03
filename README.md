@@ -85,5 +85,3 @@ The data can be adapted to suit the application. Summary counts can be derived o
 ## Automated tests
 
 Vitest and React Testing Library cover adding/removing devices, summary updates, invalid and cancelled forms, search and pagination edge cases, accessible confirmation messages, manual dismissal, four-second expiry, replacement notifications (including repeated text), and timer cleanup. Timer tests use fake time to stay fast and deterministic.
-
-The chart is mocked in application tests because canvas rendering is unrelated to these flows. jsdom dialog shims support opening and closing; native focus containment, backdrop styling, and responsive layout still need a browser check.
