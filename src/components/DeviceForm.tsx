@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useState, type SubmitEvent } from 'react'
 import type { NewDevice } from '../types'
 import { statusLabels, statuses } from '../constants/deviceStatus'
 
@@ -10,7 +10,7 @@ interface Props {
 export default function DeviceForm({ onAdd, onCancel }: Props) {
   const [error, setError] = useState('')
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
     const name = String(data.get('name') ?? '').trim()
